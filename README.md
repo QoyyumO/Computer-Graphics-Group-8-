@@ -1,7 +1,7 @@
 # Computer-Graphics-Group-8-
-Abdul-Qoyyum Oyadeyi
-Daniel Jeremiah
-Femi-Sunmonu AbdulRazaq
-Nwachukwu Izuchukwu
-Ifunanya Egwuatu
+Abdul-Qoyyum Oyadeyi <br>
+Daniel Jeremiah<br>
+Femi-Sunmonu AbdulRazaq<br>
+Nwachukwu Izuchukwu<br>
+Ifunanya Egwuatu<br>
 Gbulie Chisom
