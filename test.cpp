@@ -34,7 +34,7 @@ bool initSDL() {
         printf("SDL could not initialize! SDL_Error: %s\n", SDL_GetError());
         return false;
     }
-    gWindow = SDL_CreateWindow("2D Rendering", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
+    gWindow = SDL_CreateWindow("2D Rendering- Group 8", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, SCREEN_WIDTH, SCREEN_HEIGHT, SDL_WINDOW_SHOWN);
     if (gWindow == NULL) {
         printf("Window could not be created! SDL_Error: %s\n", SDL_GetError());
         return false;
@@ -67,8 +67,10 @@ int main(int argc, char* argv[]) {
     }
 
     SDL_Texture* textureLeft = loadTexture("./Assets/oct.png");
-    SDL_Texture* textureRight = loadTexture("./Assets/view2.jpeg");
-    SDL_Texture* backgroundTexture = loadTexture("./Assets/view4.png");
+    SDL_Texture* textureRight = loadTexture("./Assets/view1.jpeg");
+    SDL_Texture* textureLeft1 = loadTexture("./Assets/frame.png");
+    SDL_Texture* textureRight1 = loadTexture("./Assets/frame1.png");
+    SDL_Texture* backgroundTexture = loadTexture("./Assets/view5.jpg");
 
     bool quit = false;
     SDL_Event e;
@@ -88,10 +90,18 @@ int main(int argc, char* argv[]) {
         // Define position and size for the left image
         SDL_Rect leftDest = { 76, 206, 323, 176 }; // Adjust position and size as needed
         SDL_RenderCopy(gRenderer, textureLeft, NULL, &leftDest);
+        
+        // Define position and size for the left frame
+        SDL_Rect left1Dest = { 63, 200, 326, 195 }; // Adjust position and size as needed
+        SDL_RenderCopy(gRenderer, textureLeft1, NULL, &left1Dest);
 
         // Define position and size for the right image
         SDL_Rect rightDest = { 428, 213, 300, 172 }; // Adjust position and size as needed
         SDL_RenderCopy(gRenderer, textureRight, NULL, &rightDest);
+        
+        // Define position and size for the right frame
+        SDL_Rect right1Dest = { 417, 200, 326, 195 }; // Adjust position and size as needed
+        SDL_RenderCopy(gRenderer, textureRight1, NULL, &right1Dest);
 
         SDL_RenderPresent(gRenderer);
     }
